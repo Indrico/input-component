@@ -8,6 +8,12 @@ p {
   font-size: 12px;
 }
 
+small {
+  font-size: 11px;
+  display: block;
+  margin-top: 5px;
+}
+
 .App {
   width: 70%;
   margin: auto;
@@ -34,11 +40,11 @@ input:focus {
   color: #2962FF !important;
 }
 
-.input-container:hover label, .input-container:hover input {
+.input-container:hover label, .input-container:active:hover input {
   color: #333 !important;
 }
 
-.input-container:hover input {
+.input-container:active:hover input {
   border: 2px solid #333 !important;
 }
 
@@ -51,9 +57,52 @@ input::placeholder {
   font-weight: 600;
 }
 
-.three-column {
+input:disabled {
+  opacity: 0.5;
+}
+
+input:disabled:hover {
+  border: 2px solid #828282 !important;
+}
+
+.grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   margin-bottom: 30px;
+}
+
+.three-column {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.two-column {
+  grid-template-columns: 1fr 1fr;
+}
+
+textarea {
+  width: 50%;
+  resize: none;
+  padding: 10px 5px 10px 10px;
+  border-radius: 10px;
+}
+
+textarea::placeholder {
+  font-weight: 600;
+}
+
+.form-group {
+  position: relative;
+}
+
+.icon-container {
+  position: absolute;
+  top: 33px;
+}
+
+.startIcon {
+  left: 10px;
+}
+
+.endIcon {
+  left: 170px;
 }
